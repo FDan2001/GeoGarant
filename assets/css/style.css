@@ -114,6 +114,17 @@ Nav
   border-radius: 10px;
 }
 
+#navbarNavAltMarkup{
+  top: 35px; 
+  right: 24px; 
+  position: absolute;
+}
+@media (max-width: 992px){
+  #navbarNavAltMarkup{
+  position: unset;
+  }
+}
+
 /*
 Main Section
 */

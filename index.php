@@ -55,7 +55,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- E1 style -->
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="top: 35px; right: 24px; position: absolute; ">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link scrollto active" href="#hero">Главная</a>
               <a class="nav-link scrollto" href="#about">О нас</a>
