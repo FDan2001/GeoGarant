@@ -147,3 +147,59 @@ function msgclose(){
         }
     }
 }
+
+var carousele = document.getElementById("carousel");
+var startX, endX;
+
+carousele.addEventListener("mousedown", function(event) {
+    startX = event.clientX;
+});
+
+carousele.addEventListener("mousemove", function(event) {
+    endX = event.clientX;
+});
+
+carousele.addEventListener("mouseup", function(event) {
+    if (startX < endX) {
+        Prev();
+    }
+    else if (startX > endX) {
+        Next();
+    }
+});
+var startX, endX;
+
+carousele.addEventListener("touchstart", function(event) {
+  startX = event.touches[0].clientX;
+});
+
+carousele.addEventListener("touchmove", function(event) {
+    endX = event.touches[0].clientX;
+});
+
+carousele.addEventListener("touchend", function(event) {
+    // Проверяем, насколько сильно пользователь сместил палец вправо при касании
+    if (startX < endX && (endX - startX) > 50) {
+        Prev();
+    }
+    else if (startX > endX && (endX - startX) < 50) {
+        Next();
+    }
+
+});
+
+
+var provopen=0;
+
+function openmenu(){
+    if (provopen==0) {
+        var slang = document.getElementById("slang");
+        slang.style.marginTop="340px";
+        provopen=1;
+    }
+    else{
+        var slang = document.getElementById("slang");
+        slang.style.marginTop="0px";
+        provopen=0;
+    }
+}

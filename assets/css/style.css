@@ -56,12 +56,19 @@ Nav
 }
 
 .logo-img {
-    width: 300px;
-    height: auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 40px;
-    margin-right: 40px;
+  width: 300px;
+  height: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+@media(max-width: 410px){
+  .logo-img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .bg-light {
@@ -69,12 +76,26 @@ Nav
 }
 
 @media (min-width: 992px){
-.navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    flex-direction: row-reverse;
-}
+  .navbar-expand-lg .navbar-collapse {
+      display: flex!important;
+      flex-direction: row-reverse;
+  }
 }
 @media (max-width: 992px){
+
+  .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: white!important;
+  }
+  .navbar-collapse {
+    align-items: center;
+    width: 100%;
+    background-color: #000000c7;
+    border: 1px solid #689745;
+    border-radius: 24px;
+    padding-left: 21px;
+    padding-right: 5px;
+  }
+
 .bg-light {
     background-color: rgb(0 0 0 / 50%)!important;
     border-radius: 0px 0px 24px 24px;
@@ -478,6 +499,33 @@ About
 Work
 */
 
+.scrol{
+  height: 370px; /* высота области */
+  overflow-y: scroll; /* прокручивание только по вертикали */
+}
+/* стилизация вертикальной полосы прокрутки */
+    body::-webkit-scrollbar {
+      width: 7px; /* ширина полосы */
+      background-color: #00000000; /* цвет фона полосы */
+      border-radius: 24px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #669933; /* цвет ползунка */
+      border-radius: 24px;
+    }
+/* стилизация вертикальной полосы прокрутки */
+    .scrol::-webkit-scrollbar {
+      width: 7px; /* ширина полосы */
+      background-color: #00000000; /* цвет фона полосы */
+      border-radius: 24px;
+    }
+
+    .scrol::-webkit-scrollbar-thumb {
+      background-color: #669933; /* цвет ползунка */
+      border-radius: 24px;
+    }
+
 .kart {
     position: relative;
     margin: 60px 0 20px 0;
@@ -631,6 +679,7 @@ Work
 }
 
 main#carousel {
+    cursor: grab;
     grid-row: 1 / 2;
     grid-column: 1 / 8;
     /* width: 100vw; */
@@ -644,11 +693,11 @@ main#carousel {
     --items: 5;
     --middle: 3;
     --position: 1;
-    pointer-events: none;
 }
 
 .item {
   position: absolute;
+  pointer-events: none;
   width: auto;
   height: 680px;
   border: 4px solid #69964b;
