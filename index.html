@@ -37,6 +37,19 @@
   </div>
 </div>
 
+<div id="msg-lic" class="msg">
+  <div class="content-msg-lic-container">
+    <div id="content-msg-lic" class="content-msg-lic">
+      <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(1).jpg" alt="">
+      <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(2).jpg" alt="">
+      <img class="img-lic" src="img/Lic/Поверка GeoMax Zoom 30 5.jpg" alt="">
+      <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(1).jpg" alt="">
+      <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(2).jpg" alt="">
+    </div>
+  </div>
+  <button id="close" onclick="msgliclose();" class="close"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
   <!-- Header -->
   <header id="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,6 +76,7 @@
               <a class="nav-link scrollto " href="#portfolio">Портфолио</a>
               <a class="nav-link scrollto" href="#team">Команда</a>
               <a class="nav-link scrollto" href="#contact">Контакты</a>
+              <a class="nav-link scrollto" href="#" onclick="openlic();">Лицензии</a>
             </div>
           </div>
         </div>
@@ -107,7 +121,7 @@
               </li>
               <li>
                 <div>
-                  <h5>Точность наших работ гарантирует современное профессиональное оборудование. <a href="#portfolio">Подробнее</a></h5>
+                  <h5>Точность наших работ гарантирует современное профессиональное оборудование. <a href="#" onclick="openlic();">Подробнее</a></h5>
                 </div>
               </li>
               <li>
@@ -117,7 +131,7 @@
               </li>
               <li>
                 <div>
-                  <a href="#work" class="btn-na-zaivk">Заполнить заявку</a>
+                  <a href="#contact" class="btn-na-zaivk">Заполнить заявку</a>
                 </div>
               </li>
             </ul>

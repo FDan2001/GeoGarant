@@ -75,6 +75,16 @@ function msgclose(){
     document.getElementById("message").value = "";
 }
 
+function msgliclose(){
+    var msglic = document.getElementById("msg-lic");
+    msglic.className = "msg";
+}
+
+function openlic(){
+    var msglic = document.getElementById("msg-lic");
+    msglic.className = "msg-active";
+}
+
 /////phoneValid
 
   function setCursorPosition(pos, e) {

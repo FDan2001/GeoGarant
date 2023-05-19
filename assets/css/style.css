@@ -1236,3 +1236,45 @@ footer span{
   transform: translate3d(0px, -1px, 0px);
   transition: .3s;
 }
+/*msg-lic*/
+.content-msg-lic {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px;
+}
+
+.content-msg-lic-container{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  height: 90vh;
+  width: 90vw;
+  border: 5px solid #67983d;
+  border-radius: 24px;
+  box-shadow: 0px 3px 10px 5px #00000030;
+}
+
+.img-lic{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: 5px solid #67983d;
+  border-top: 5px solid #67983d;
+  border-radius: 24px;
+}
+
+/* стилизация вертикальной полосы прокрутки */
+    .content-msg-lic::-webkit-scrollbar {
+      width: 10px;
+      background-color: #e1e1e1;
+      border-radius: 24px;
+    }
+
+    .content-msg-lic::-webkit-scrollbar-thumb {
+      background-color: #669933;
+      border-radius: 24px;
+      width: 30px;
+    }
