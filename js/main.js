@@ -213,3 +213,30 @@ function openmenu(){
         provopen=0;
     }
 }
+
+var slideobjects = document.getElementById("slide-objects");
+var startX, endX, r;
+
+slideobjects.addEventListener("mousedown", function(event) {
+    startX = event.clientX;
+});
+
+slideobjects.addEventListener("mousemove", function(event) {
+    endX = event.clientX;
+});
+
+slideobjects.addEventListener("mouseup", function(event) {
+    r=startX-endX;
+    if (startX < endX) {
+        slideobjects.scrollLeft += r;
+    }
+    else if (startX > endX) {
+        slideobjects.scrollLeft += r;
+    }
+});
+
+const images = document.querySelectorAll('img');
+
+images.forEach((image) => {
+  image.draggable = false;
+});

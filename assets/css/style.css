@@ -1278,3 +1278,44 @@ footer span{
       border-radius: 24px;
       width: 30px;
     }
+
+.slide-objects{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+  border-radius: 24px;
+  cursor: grab;
+}
+
+.slide-objects>img{
+  width: auto;
+  height: 64vh;
+  border: 3px solid #67983d;
+  border-radius: 24px;
+  margin: 5px;
+}
+
+@media(max-width: 890px){
+  .slide-objects>img{
+    width: 90%;
+    max-height: 50vh;
+    border: 3px solid #67983d;
+    border-radius: 24px;
+    margin: 5px;
+    height: 70%;
+  }
+}
+
+/* стилизация вертикальной полосы прокрутки */
+    .slide-objects::-webkit-scrollbar {
+      width: 10px;
+      background-color: #e1e1e1;
+      border-radius: 24px;
+    }
+
+    .slide-objects::-webkit-scrollbar-thumb {
+      background-color: #669933;
+      border-radius: 24px;
+      width: 30px;
+    }
