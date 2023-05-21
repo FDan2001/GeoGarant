@@ -214,26 +214,39 @@ function openmenu(){
     }
 }
 
-var slideobjects = document.getElementById("slide-objects");
-var startX, endX, r;
+let lastX = 0; // последнее положение мыши
 
-slideobjects.addEventListener("mousedown", function(event) {
-    startX = event.clientX;
-});
+// функция для обработки события перемещения мыши на слайдере
+function moveSlide(event) {
+  const x = event.clientX; // текущее положение мыши
+  const r = lastX - x; // расстояние, на которое переместилась мышь
+  const slider = document.querySelector(".slide-objects");
 
-slideobjects.addEventListener("mousemove", function(event) {
-    endX = event.clientX;
-});
+  // обновляем положение слайдера
+  slider.scrollLeft += r;
 
-slideobjects.addEventListener("mouseup", function(event) {
-    r=startX-endX;
-    if (startX < endX) {
-        slideobjects.scrollLeft += r;
-    }
-    else if (startX > endX) {
-        slideobjects.scrollLeft += r;
-    }
-});
+  // запоминаем последнее положение мыши
+  lastX = x;
+}
+
+// функция для включения обработки события перемещения мыши на слайдере
+function enableMouseSlide() {
+  const slider = document.getElementById('slide-objects');
+  if (slider) {
+    slider.addEventListener("mousedown", (event) => {
+      lastX = event.clientX;
+      slider.addEventListener("mousemove", moveSlide);
+    });
+    slider.addEventListener("mouseup", () => {
+      slider.removeEventListener("mousemove", moveSlide);
+    });
+    slider.addEventListener("mouseleave", () => {
+      slider.removeEventListener("mousemove", moveSlide);
+    });
+  }
+}
+enableMouseSlide();
+
 
 const images = document.querySelectorAll('img');
 
