@@ -1296,7 +1296,7 @@ footer span{
   margin: 5px;
   object-fit: cover;
   max-width: 700px;
-  width: 46vw;
+  width: 70vw;
 }
 
 @media(max-width: 700px){
