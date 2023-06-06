@@ -1244,6 +1244,26 @@ footer span{
   border-radius: 35px;
 }
 
+.content-msg-lic>h3{
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+.content-msg-lic>h3>i{
+  color: #689745;
+  margin-left: 6px;
+}
+
+.closelic{
+  display: none!important;
+}
+
+.content-lic{
+  display: flex;
+  flex-direction: column;
+}
+
 .content-msg-lic-container{
   background-color: #ffffff;
   display: flex;
