@@ -253,3 +253,19 @@ const images = document.querySelectorAll('img');
 images.forEach((image) => {
   image.draggable = false;
 });
+
+function openlicdiv(index) {
+  var contents = document.querySelectorAll(".content-lic");
+
+  for (var i = 0; i < contents.length; i++) {
+    if (i + 1 == index) {
+      if (contents[i].classList.contains("closelic")) {
+        contents[i].classList.remove("closelic");
+      } else {
+        contents[i].classList.add("closelic");
+      }
+    } else {
+      contents[i].classList.add("closelic");
+    }
+  }
+}
