@@ -27,6 +27,7 @@ $("#form").submit(function (e) { // Устанавливаем событие о
                         document.getElementById("header-msg").textContent="Заявка успешно отправлена!";
                         document.getElementById("opis-msg").textContent="Мы свяжемся с вами в ближайшее время";
                         msg.className = "msg-active";
+                        document.body.classList.add("noscroll");
                     }else{
                         var msg = document.getElementById("msg");
                         var close = document.getElementById("close");
@@ -35,6 +36,7 @@ $("#form").submit(function (e) { // Устанавливаем событие о
                         close.classList.add("error");
                         document.getElementById("content-msg").classList.add("error");
                         msg.className = "msg-active";
+                        document.body.classList.add("noscroll");
                     }
                 },
                 error: function (jqXHR, exception) {
@@ -73,16 +75,27 @@ function msgclose(){
     document.getElementById("phone").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
+    document.body.classList.remove("noscroll");
 }
 
 function msgliclose(){
     var msglic = document.getElementById("msg-lic");
     msglic.className = "msg";
+    var contents = document.querySelectorAll(".content-lic");
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.add("closelic");
+    }
+    document.body.classList.remove("noscroll");
+    index=0;
 }
-
-function openlic(){
+var index=0;
+function openlic(index){
+    document.body.classList.add("noscroll");
     var msglic = document.getElementById("msg-lic");
     msglic.className = "msg-active";
+    if(index!=0){
+        openlicdiv(index);
+    }
 }
 
 /////phoneValid
