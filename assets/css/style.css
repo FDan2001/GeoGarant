@@ -468,10 +468,11 @@ About
 .about .content p:last-child {
   margin-bottom: 0;
 }
-.about .content a{
+.about .content a {
   text-decoration: revert;
   text-decoration-color: #689745;
   color: #689745;
+  cursor: pointer;
 }
 .about .content a:hover{
   text-decoration-color: #6fbb46;
