@@ -1350,3 +1350,7 @@ footer span{
       width: auto;
       height: 100%;
     }
+
+.noscroll {
+  overflow: hidden;
+}
