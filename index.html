@@ -39,12 +39,21 @@
 
 <div id="msg-lic" class="msg">
   <div class="content-msg-lic-container">
-    <div id="content-msg-lic" class="content-msg-lic">
-      <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(1).jpg" alt="">
-      <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(2).jpg" alt="">
-      <img class="img-lic" src="img/Lic/Поверка GeoMax Zoom 30 5.jpg" alt="">
-      <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(1).jpg" alt="">
-      <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(2).jpg" alt="">
+    <div id="content-msg-lic" class="content-msg-lic text-center">
+      <h3 onclick="openlicdiv(1)">Выписка СРО<i class="fa-solid fa-caret-down"></i></h3>
+      <div class="content-lic closelic">
+        <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(1).jpg" alt="">
+        <img class="img-lic" src="img/Lic/Выписка СРО до 14.05.23(2).jpg" alt="">
+      </div>
+      <h3 onclick="openlicdiv(2)">Поверка GeoMax Zoom<i class="fa-solid fa-caret-down"></i></h3>
+      <div class="content-lic closelic">
+        <img class="img-lic" src="img/Lic/Поверка GeoMax Zoom 30 5.jpg" alt="">
+      </div>
+      <h3 onclick="openlicdiv(3)">Поверка Prin CE i50<i class="fa-solid fa-caret-down"></i></h3>
+      <div class="content-lic closelic">
+        <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(1).jpg" alt="">
+        <img class="img-lic" src="img/Lic/поверка Prin CE i50 до 11.10.2023(2).jpg" alt="">
+      </div>
     </div>
   </div>
   <button id="close" onclick="msgliclose();" class="close"><i class="fa-solid fa-xmark"></i></button>
